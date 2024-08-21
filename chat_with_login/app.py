@@ -1,4 +1,5 @@
 from fasthtml.common import *
+from fasthtml.starlette import Mount, StaticFiles
 
 # sqlite database, built-in approach
 db = database('data/uchats.db')
@@ -61,7 +62,9 @@ app = FastHTML(before=bware,
                      SortableJS('.sortable'),
                      # MarkdownJS is actually provided as part of FastHTML, but we've included the js code here
                      # so that you can see how it works.
-                     Script(markdown_js, type='module'),)
+                     Script(markdown_js, type='module'),
+                     Script(src="/static/theme-toggle.js")),
+               routes=[Mount("/static", app=StaticFiles(directory="static"), name="static")]
                 )
 # We add `rt` as a shortcut for `app.route`, which is what we'll use to decorate our route handlers.
 # When using `app.route` (or this shortcut), the only required argument is the path.
@@ -117,7 +120,8 @@ def logout(sess):
 @rt("/")
 def get(auth):
     title = f"Welcome, {auth}!"
-    top = Grid(H1(title), Div(A('logout', href='/logout'), style='text-align: right'))
+    theme_toggle = Button("Toggle Theme", id="theme-toggle", onclick="toggleTheme()")
+    top = Grid(H1(title), Div(theme_toggle, A('logout', href='/logout'), style='text-align: right'))
 
     return Title(title), Container(top)
 

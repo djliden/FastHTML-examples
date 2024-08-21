@@ -163,3 +163,4 @@ cython_debug/
 /.sesskey
 /data/
 .sesskey
+data/
