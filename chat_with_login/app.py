@@ -43,6 +43,11 @@ proc_htmx('.markdown', e => e.innerHTML = marked.parse(e.textContent));
 
 # initialize the app itself
 
+# different picocss theme?
+picocss = "https://cdn.jsdelivr.net/npm/@picocss/pico@latest/css/pico.sand.min.css"
+picolink = (Link(rel="stylesheet", href=picocss),
+            Style(":root { --pico-font-size: 100%; }"))
+
 app = FastHTML(before=bware,
                htmlkw={"data-theme": "light"},
                # These are the same as Starlette exception_handlers, except they also support `FT` results
@@ -121,7 +126,11 @@ def logout(sess):
 def get(auth):
     title = f"Welcome, {auth}!"
     theme_toggle = Button("Toggle Theme", id="theme-toggle", onclick="toggleTheme()")
-    top = Grid(H1(title), Div(theme_toggle, A('logout', href='/logout'), style='text-align: right'))
+    
+    logout_button = A("Logout", href="/logout", type="button")
+    
+    top = Grid(H1(title), Div(theme_toggle, 
+                              logout_button, style='text-align: right'))
 
     return Title(title), Container(top)
 
