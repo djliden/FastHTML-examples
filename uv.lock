@@ -77,7 +77,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "python-fasthtml", specifier = ">=0.4.4" }]
+requires-dist = [{ name = "python-fasthtml" }]
 
 [[package]]
 name = "fastlite"
@@ -147,11 +147,11 @@ wheels = [
 
 [[package]]
 name = "idna"
-version = "3.7"
+version = "3.8"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz", hash = "sha256:028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc", size = 189575 }
+sdist = { url = "https://files.pythonhosted.org/packages/e8/ac/e349c5e6d4543326c6883ee9491e3921e0d07b55fdf3cce184b40d63e72a/idna-3.8.tar.gz", hash = "sha256:d838c2c0ed6fced7693d5e8ab8e734d5f8fda53a039c0164afb0b82e771e3603", size = 189467 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl", hash = "sha256:82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0", size = 66836 },
+    { url = "https://files.pythonhosted.org/packages/22/7e/d71db821f177828df9dea8c42ac46473366f191be53080e552e628aad991/idna-3.8-py3-none-any.whl", hash = "sha256:050b4e5baadcd44d760cedbd2b8e639f2ff89bbc7a5730fcc662954303377aac", size = 66894 },
 ]
 
 [[package]]
@@ -204,7 +204,7 @@ wheels = [
 
 [[package]]
 name = "python-fasthtml"
-version = "0.4.4"
+version = "0.4.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -218,9 +218,9 @@ dependencies = [
     { name = "starlette" },
     { name = "uvicorn", extra = ["standard"] },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b0/5a/cd072a38c0d395e26341dd15f52d9d1f89ecb19890b684bfc040735d0e59/python-fasthtml-0.4.4.tar.gz", hash = "sha256:b8f493c04e4d0454df2bca36d7a19be780a1388ac86c5a388a074dcd4e804fde", size = 40654 }
+sdist = { url = "https://files.pythonhosted.org/packages/2a/a7/c597bfad81a2a90cd75e030f76aba24008b9d564cea6756c8b77e2bfcc25/python-fasthtml-0.4.5.tar.gz", hash = "sha256:e3a8b1de9097f91097fbf6cd62cf4ff72f708738428f4ede5c69a2a110401f2c", size = 40652 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b6/59/b9288ab958ee628459a3f6e3bcda7bcf76d5885143a9e55ac741e10a738c/python_fasthtml-0.4.4-py3-none-any.whl", hash = "sha256:6f9b0e7fd973cf023dc1a8cb6ad65b113d0b56201e02ea1477bdfec1d4f7e022", size = 44056 },
+    { url = "https://files.pythonhosted.org/packages/e4/4b/be5ff8c3217f4fcd4603c7de0a98c06f8839e61d1d6d7eaa36210e3022b9/python_fasthtml-0.4.5-py3-none-any.whl", hash = "sha256:ffb9d6ad1eedb5fcdada96d633a8fd4d9102693183360846f8b2e88b8c8b806d", size = 44121 },
 ]
 
 [[package]]
